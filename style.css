@@ -1,0 +1,146 @@
+#game div {
+  border: 3px solid black;
+  border-radius: 20px;
+  width: 15%;
+  height: 20%;
+  margin: 10px;
+  display: inline-block;
+  background-image: radial-gradient(rgb(140, 140, 140), black);
+  cursor: pointer;
+}
+
+#amount {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  border-radius: 10px;
+  width: 50%; 
+  height: 25px; 
+  background: black; 
+  outline: none; 
+}
+
+#amount-text {
+  font-size: 50px;
+  color: white;
+}
+
+label {
+  font-size: 25px;
+  color: white;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+#amount::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 25px; 
+  height: 25px;
+  border-radius: 50%;
+  background-image: radial-gradient(white, black);
+  cursor: pointer; 
+}
+
+#amount::-moz-range-thumb {
+  width: 25px; 
+  height: 25px; 
+  border-radius: 50%;
+  background-image: radial-gradient(white, black);
+  cursor: pointer; 
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0px;
+  animation-name: pulse;
+  animation-delay: none;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+#dashboard {
+  font-size: 20px;
+  color: white;
+}
+
+button {
+  margin: 10px;
+  width: 150px;
+  font-family: 'Gloria Hallelujah';
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  box-shadow: 0 0 10px white;
+  cursor: pointer;
+}
+
+#game div:hover {
+  box-shadow: 0 0 10px white;
+}
+
+#game div.flipped:hover {
+  box-shadow: none;
+  cursor: default;
+}
+#game div.unflipped:hover {
+  box-shadow: none;
+  cursor: default;
+}
+
+#game {
+  height: 400px; 
+}
+body {
+  font-family: 'Gloria Hallelujah';
+  background-image: radial-gradient(rgb(151, 54, 100), rgb(119, 27, 81));
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+}
+#game div.flipped {
+	animation-name: flip;
+  animation-duration: 1s;
+}
+
+#game div.unflipped {
+  animation-name: unflip;
+  animation-duration: 1s;
+}
+
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes unflip {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 6px white;
+  }
+  100% {
+    text-shadow: 0 0 8px white;
+
+  }
+}
