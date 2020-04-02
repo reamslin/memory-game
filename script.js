@@ -113,7 +113,7 @@ function restartButtonPressed () {
   createDivsForColors(shuffledColors);
   document.body.appendChild(gameContainer);
   //reset global variables
-  selectedCardElement = false;
+  otherCard = false;
   wait = false;
   score = 0;
   //reset score display
